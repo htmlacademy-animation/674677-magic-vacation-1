@@ -96,6 +96,8 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  transform: translateX(50px);
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -273,6 +275,31 @@
       width: 0.4rem;
       height: 0.4rem;
       background-color: $c-light;
+    }
+  }
+}
+
+.swiper-slide-active {
+  .slider__item-text {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 1s 0.5s, opacity 1s 0.5s;
+
+    @media (max-width: $mobile) {
+      transition: transform 0.5s 0s, opacity 0.5s 0s;
+    }
+  }
+}
+
+.swiper-slide-next {
+  .slider__item-text {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 1s 1s, opacity 1s 1s;
+
+    @media (max-width: $mobile) {
+      transform: translateX(50px);
+      opacity: 0;
     }
   }
 }
