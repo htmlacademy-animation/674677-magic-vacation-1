@@ -1,3 +1,53 @@
+@keyframes slide-in-bullet {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-text {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-button {
+  0% {
+    opacity: 0;
+    width: 35%;
+  }
+
+  1% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes slide-in-button-text {
+  0% {
+    color: rgba($color: $c-dark, $alpha: 0);
+  }
+
+  100% {
+    color: rgba($color: $c-dark, $alpha: 1);
+  }
+}
+
 .screen {
   position: fixed;
   display: flex;
@@ -318,10 +368,6 @@
   }
 }
 
-// .screen--prizes {
-//   background-color: $c-dark;
-// }
-
 .screen--game {
   position: relative;
   background-color: $c-dark;
@@ -370,6 +416,74 @@
 
 .screen--rules {
   background-color: $c-dark;
+
+  &.active {
+    .rules__item {
+      &::before {
+        animation-name: slide-in-bullet;
+        animation-duration: 0.2s;
+        animation-fill-mode: backwards;
+        animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      p {
+        animation-name: slide-in-text;
+        animation-duration: 0.4s;
+        animation-fill-mode: backwards;
+        animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+      }
+
+      &:nth-child(1) {
+        p {
+          animation-delay: 0.2s;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          animation-delay: 0.2s;
+        }
+
+        p {
+          animation-delay: 0.4s;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          animation-delay: 0.4s;
+        }
+
+        p {
+          animation-delay: 0.6s;
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          animation-delay: 0.6s;
+        }
+
+        p {
+          animation-delay: 0.8s;
+        }
+      }
+    }
+
+    .rules__link {
+      animation-name: slide-in-button-text;
+      animation-duration: 0.2s;
+      animation-fill-mode: backwards;
+      animation-delay: 1s;
+
+      &::before {
+        animation-name: slide-in-button;
+        animation-duration: 0.4s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.8s;
+      }
+    }
+  }
 }
 
 body.active {
