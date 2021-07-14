@@ -1,3 +1,13 @@
+@keyframes showing {
+  0% {
+    transform: translate3d(0, 170%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -170,5 +180,157 @@
     transform: translateY(0);
     opacity: 1;
     transition: transform 1s, opacity 1s;
+  }
+
+  .intro__title {
+    .word {
+      display: flex;
+      overflow: hidden;
+      padding-top: 4.5rem;
+      line-height: 6.5rem;
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        padding-top: 1rem;
+        line-height: 3rem;
+      }
+
+      @media (max-width: $tablet) and (orientation: landscape) {
+        padding-top: 3.5rem;
+        line-height: 5.5rem;
+      }
+
+      @media (max-width: $mobile) and (orientation: landscape) {
+        padding-top: 1.5rem;
+        line-height: 3.5rem;
+      }
+
+      .character {
+        display: block;
+        animation: showing 0.8s ease-out both;
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+          animation-duration: 0.9s;
+          animation-delay: 0.1s;
+        }
+
+        &:nth-child(5),
+        &:nth-child(9),
+        &:nth-child(11) {
+          animation-duration: 0.8s;
+          animation-delay: 0.2s;
+        }
+
+        &:nth-child(1) {
+          animation-duration: 0.7s;
+          animation-delay: 0.3s;
+        }
+
+        &:nth-child(8) {
+          animation-duration: 0.6s;
+          animation-delay: 0.4s;
+        }
+      }
+
+      &:nth-child(2) {
+        .character {
+          &:nth-child(4) {
+            animation-delay: 0.4s;
+          }
+
+          &:nth-child(6) {
+            animation-duration: 0.9s;
+            animation-delay: 0.5s;
+          }
+
+          &:nth-child(3) {
+            animation-duration: 0.8s;
+            animation-delay: 0.6s;
+          }
+
+          &:nth-child(1),
+          &:nth-child(5) {
+            animation-duration: 0.7s;
+            animation-delay: 0.7s;
+          }
+
+          &:nth-child(2) {
+            animation-duration: 0.6s;
+            animation-delay: 0.8s;
+          }
+        }
+      }
+    }
+  }
+
+  .intro__date {
+    .word {
+      display: flex;
+      overflow: hidden;
+      padding-top: 1.5rem;
+      line-height: 2.5rem;
+
+      .character {
+        display: block;
+        animation: showing 0.8s ease-out both;
+        animation-delay: 1s;
+
+        &:nth-child(4),
+        &:nth-child(14) {
+          animation-duration: 0.9s;
+          animation-delay: 1.1s;
+        }
+
+        &:nth-child(7),
+        &:nth-child(17),
+        &:nth-child(8) {
+          animation-duration: 0.8s;
+          animation-delay: 1.2s;
+        }
+
+        &:nth-child(2),
+        &:nth-child(9),
+        &:nth-child(12) {
+          animation-duration: 0.7s;
+          animation-delay: 1.3s;
+        }
+
+        &:nth-child(1),
+        &:nth-child(5) {
+          animation-duration: 0.6s;
+          animation-delay: 1.4s;
+        }
+      }
+
+      &:nth-child(2) {
+        .character {
+          &:nth-child(4) {
+            animation-delay: 0.4s;
+          }
+
+          &:nth-child(6) {
+            animation-duration: 0.9s;
+            animation-delay: 0.5s;
+          }
+
+          &:nth-child(3) {
+            animation-duration: 0.8s;
+            animation-delay: 0.6s;
+          }
+
+          &:nth-child(1),
+          &:nth-child(5) {
+            animation-duration: 0.7s;
+            animation-delay: 0.7s;
+          }
+
+          &:nth-child(2) {
+            animation-duration: 0.6s;
+            animation-delay: 0.8s;
+          }
+        }
+      }
+    }
   }
 }
