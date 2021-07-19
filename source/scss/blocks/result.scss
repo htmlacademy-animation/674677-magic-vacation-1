@@ -39,18 +39,48 @@
     right: -1rem;
   }
 
-  picture {
-    display: block;
-    width: 100%;
-    height: 100%;
+  // picture {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  // }
+
+  // img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  //   object-position: center;
+  // }
+
+  .leaf-blue-1 {
+    position: absolute;
+    transform: scale(1) translate3d(50%, -18%, 0);
+    opacity: 1;
   }
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  .leaf-blue-2 {
+    position: absolute;
+    transform: scale(1) translate3d(-74%, 19%, 0);
+    opacity: 1;
+  }
+
+  .leaf-green {
+    position: absolute;
+    transform: scale(1) translate3d(40%, 23%, 0);
+    opacity: 1;
+  }
+
+  .suitcase {
+    position: absolute;
+    transform: scale(0.23) translate3d(-10%, -1%, 0);
+    opacity: 1;
+  }
+
+  .flamingo {
+    position: absolute;
+    transform: scale(0.17) translate3d(-43%, 13%, 0);
+    opacity: 1;
   }
 }
 
