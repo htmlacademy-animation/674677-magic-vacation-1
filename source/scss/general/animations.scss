@@ -7,3 +7,146 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes suitcase {
+  0% {
+    transform: translate3d(-20%, 100%, 0) scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(-10%, 23%, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flamingo {
+  0% {
+    transform: translate3d(-80%, 130%, 0) rotate(-30deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(-42%, 45%, 0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flamingo-shake {
+  0% {
+    transform: translate3d(-42%, 45%, 0) rotate(0);
+    transform-origin: 50% 60%;
+  }
+
+  100% {
+    transform: translate3d(-42%, 50%, 0) rotate(-7deg);
+    transform-origin: 50% 60%;
+  }
+}
+
+@keyframes leaf-blue-1 {
+  0% {
+    transform: translate3d(50%, 15%, 0) rotate(-15deg);
+    transform-origin: 0 100%;
+    opacity: 0;
+  }
+
+  15% {
+    transform: translate3d(50%, 15%, 0) rotate(15deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translate3d(50%, 15%, 0) rotate(-8deg);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate3d(50%, 15%, 0) rotate(6deg);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translate3d(50%, 15%, 0) rotate(-3deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate3d(50%, 15%, 0) rotate(1deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(50%, 15%, 0) rotate(0);
+    transform-origin: 0 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes leaf-blue-2 {
+  0% {
+    transform: translate3d(-74%, 54%, 0) rotate(17deg);
+    transform-origin: 100% 100%;
+    opacity: 0;
+  }
+
+  15% {
+    transform: translate3d(-74%, 54%, 0) rotate(-16deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translate3d(-74%, 54%, 0) rotate(8deg);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate3d(-74%, 54%, 0) rotate(-5deg);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translate3d(-74%, 54%, 0) rotate(3deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate3d(-74%, 54%, 0) rotate(-1deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(-74%, 54%, 0) rotate(0);
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes leaf-green {
+  0% {
+    transform: translate3d(40%, 77%, 0) rotate(-8deg);
+    transform-origin: 0 100%;
+    opacity: 0;
+  }
+
+  25% {
+    transform: translate3d(40%, 77%, 0) rotate(5deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate3d(40%, 77%, 0) rotate(-3deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate3d(40%, 77%, 0) rotate(1deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(40%, 77%, 0) rotate(0);
+    transform-origin: 0 100%;
+    opacity: 1;
+  }
+}
