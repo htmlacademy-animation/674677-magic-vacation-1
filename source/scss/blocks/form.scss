@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  display: none;
 }
 
 .form__label {
@@ -142,7 +143,8 @@
 
 .active {
   .form__field {
-    width: calc(100% - 21rem);
+    width: auto;
+    flex-grow: 1;
 
     @media (min-width: $stop-scaling) {
       width: calc(100% - 210px);
@@ -158,6 +160,11 @@
 
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
+    }
+
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 3s ease-in-out;
     }
   }
 }

@@ -353,4 +353,31 @@
     animation: flamingo 0.4s both,
       flamingo-shake 2s ease-in-out 0.4s infinite alternate;
   }
+
+  .form {
+    display: flex;
+  }
+
+  .form__field {
+    opacity: 0;
+    animation: form-field 1s ease-in-out 1s forwards;
+
+    @media (max-width: $mobile) {
+      animation: form-field-mobile 1s ease-in-out 1s forwards;
+    }
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  .form__button {
+    color: rgba(95, 69, 140, 0);
+    animation: button-text 0.3s ease-in-out 0.9s forwards;
+
+    &::before {
+      opacity: 0;
+      animation: button 0.3s ease-in-out 0.7s forwards;
+    }
+  }
 }

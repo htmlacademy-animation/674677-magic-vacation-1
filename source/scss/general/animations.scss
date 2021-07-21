@@ -150,3 +150,65 @@
     opacity: 1;
   }
 }
+
+@keyframes form-field {
+  0% {
+    max-width: 76px;
+    padding: 0;
+    opacity: 1;
+    flex-grow: 0;
+  }
+
+  100% {
+    max-width: 100%;
+    padding: 0 5.6rem;
+    opacity: 1;
+    flex-grow: 1;
+  }
+}
+
+@keyframes form-field-mobile {
+  0% {
+    max-width: 76px;
+    padding: 0;
+    opacity: 1;
+    flex-grow: 0;
+  }
+
+  100% {
+    max-width: 100%;
+    padding: 0 2.5rem;
+    opacity: 1;
+    flex-grow: 1;
+  }
+}
+
+@keyframes placeholder {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-text {
+  0% {
+    color: rgba(95, 69, 140, 0);
+  }
+
+  100% {
+    color: rgba(95, 69, 140, 1);
+  }
+}
