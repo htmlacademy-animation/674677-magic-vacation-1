@@ -303,3 +303,41 @@
     }
   }
 }
+
+.active {
+  .slider__item-title {
+    .word {
+      display: inline-block;
+      overflow-y: hidden;
+      padding-top: 1.5rem;
+      line-height: 2.5rem;
+
+      .character {
+        display: inline-block;
+        animation: slide-in-bottom 0.8s ease-out both;
+
+        &:nth-child(3),
+        &:nth-child(7) {
+          animation-duration: 0.8s;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+          animation-delay: 0.1s;
+          animation-duration: 0.7s;
+        }
+
+        &:nth-child(5) {
+          animation-delay: 0.2s;
+          animation-duration: 0.6s;
+        }
+
+        &:nth-child(1) {
+          animation-delay: 0.3s;
+          animation-duration: 0.5s;
+        }
+      }
+    }
+  }
+}

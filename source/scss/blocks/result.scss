@@ -39,18 +39,81 @@
     right: -1rem;
   }
 
-  picture {
-    display: block;
-    width: 100%;
-    height: 100%;
+  // picture {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  // }
+
+  // img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  //   object-position: center;
+  // }
+
+  .leaf-blue-1,
+  .leaf-blue-2,
+  .leaf-green,
+  .suitcase,
+  .flamingo {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    opacity: 0;
   }
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  .leaf-blue-1 {
+    width: 279px;
+    height: 261px;
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 195px;
+      height: 182px;
+    }
+  }
+
+  .leaf-blue-2 {
+    width: 279px;
+    height: 241px;
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 195px;
+      height: 169px;
+    }
+  }
+
+  .leaf-green {
+    width: 332px;
+    height: 159px;
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 232px;
+      height: 118px;
+    }
+  }
+
+  .suitcase {
+    width: 345px;
+    height: 345px;
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 241px;
+      height: 241px;
+    }
+  }
+
+  .flamingo {
+    width: 261px;
+    height: 261px;
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 183px;
+      height: 183px;
+    }
   }
 }
 
@@ -265,6 +328,58 @@
 
     @media (max-width: $mobile) and (orientation: landscape) {
       width: 45rem;
+    }
+  }
+}
+
+
+
+.screen--show {
+  .leaf-blue-1 {
+    animation: leaf-blue-1 2s ease-in-out 0.2s both;
+  }
+
+  .leaf-blue-2 {
+    animation: leaf-blue-2 2s ease-in-out 0.2s both;
+  }
+
+  .leaf-green {
+    animation: leaf-green 2s ease-in-out 0.3s both;
+  }
+
+  .suitcase {
+    animation: suitcase 0.5s cubic-bezier(0.6, 1.34, 0.87, 1) both;
+  }
+
+  .flamingo {
+    animation: flamingo 0.4s both,
+      flamingo-shake 2s ease-in-out 0.4s infinite alternate;
+  }
+
+  .form {
+    display: flex;
+  }
+
+  .form__field {
+    opacity: 0;
+    animation: form-field 1s ease-in-out 1s forwards;
+
+    @media (max-width: $mobile) {
+      animation: form-field-mobile 1s ease-in-out 1s forwards;
+    }
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  .form__button {
+    color: rgba(95, 69, 140, 0);
+    animation: button-text 0.3s ease-in-out 0.9s forwards;
+
+    &::before {
+      opacity: 0;
+      animation: button 0.3s ease-in-out 0.7s forwards;
     }
   }
 }
