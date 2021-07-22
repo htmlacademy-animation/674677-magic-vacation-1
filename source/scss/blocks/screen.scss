@@ -362,9 +362,22 @@
   opacity: 0;
   pointer-events: none;
 
+  .form .form__field {
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 250ms 1.5s ease-out;
+    }
+  }
+
   &.screen--show {
     opacity: 1;
     pointer-events: auto;
+
+    .form .form__field {
+      &::placeholder {
+        opacity: 1;
+      }
+    }
   }
 }
 

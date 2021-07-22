@@ -161,10 +161,5 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
     }
-
-    &::placeholder {
-      opacity: 0;
-      transition: opacity 3s ease-in-out;
-    }
   }
 }
